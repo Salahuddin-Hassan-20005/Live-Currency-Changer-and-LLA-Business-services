@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login or Sign Up | GlobalBridge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">GlobalBridge</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+          <span id="themeText">Dark Mode</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container section">
+      <section class="card auth-card">
+        <h1>Welcome to GlobalBridge</h1>
+        <p class="section-intro">Login, create an account, or continue as guest.</p>
+
+        <div class="auth-tabs">
+          <button id="showLogin" class="btn btn-secondary" type="button">Login</button>
+          <button id="showSignup" class="btn btn-secondary" type="button">Sign Up</button>
+        </div>
+
+        <form id="loginForm" class="form-grid">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" required />
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required />
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Login</button>
+          </div>
+        </form>
+
+        <form id="signupForm" class="form-grid hidden">
+          <label for="signupName">Full Name</label>
+          <input id="signupName" type="text" required />
+          <label for="signupEmail">Email</label>
+          <input id="signupEmail" type="email" required />
+          <label for="signupPassword">Password (min 6 chars)</label>
+          <input id="signupPassword" type="password" minlength="6" required />
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Create Account</button>
+          </div>
+        </form>
+
+        <div class="form-actions">
+          <button id="continueGuest" class="btn btn-secondary" type="button">Continue Without Login</button>
+        </div>
+        <p id="authStatus" class="contact-status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 GlobalBridge. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

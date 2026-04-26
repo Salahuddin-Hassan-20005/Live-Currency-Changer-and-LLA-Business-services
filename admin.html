@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Messages | GlobalBridge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">GlobalBridge</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">LLC Services</a></li>
+          <li><a href="rates.html">Currency Rates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="auth.html">Login / Sign Up</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+          <span id="themeText">Dark Mode</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container section">
+      <h1>Admin Message Center</h1>
+      <p class="section-intro">Private area to review client inquiries saved in your database.</p>
+
+      <section class="card form-card" id="adminLoginCard">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+          <div class="form-grid">
+            <label for="adminUsername">Username</label>
+            <input id="adminUsername" type="text" required />
+            <label for="adminPassword">Password</label>
+            <input id="adminPassword" type="password" required />
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Login</button>
+          </div>
+          <p id="adminStatus" class="contact-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card form-card hidden" id="adminMessagesCard">
+        <h2>Stored Messages</h2>
+        <div id="adminMessagesList" class="saved-messages"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 GlobalBridge. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

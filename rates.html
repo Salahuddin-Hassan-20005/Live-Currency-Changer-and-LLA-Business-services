@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Rates | GlobalBridge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="index.html">GlobalBridge</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">LLC Services</a></li>
+          <li><a class="active" href="rates.html">Currency Rates</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="auth.html">Login / Sign Up</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+          <span id="themeText">Dark Mode</span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="container section">
+      <h1>Live Currency Exchange Rates</h1>
+      <p class="section-intro">Choose a base currency and compare rates for your selected currencies.</p>
+
+      <section class="card form-card">
+        <form id="ratesForm">
+          <div class="form-grid">
+            <label for="amountValue">Amount</label>
+            <input id="amountValue" type="number" min="0" step="0.01" value="1" required />
+
+            <label for="baseCurrency">Base Currency</label>
+            <select id="baseCurrency" required>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="AED">AED</option>
+              <option value="AFN">AFN</option>
+            </select>
+
+            <label for="targetCurrencies">Target Currencies</label>
+            <select id="targetCurrencies" multiple size="8" required>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="AED">AED</option>
+              <option value="AFN">AFN</option>
+              <option value="CAD">CAD</option>
+              <option value="JPY">JPY</option>
+              <option value="PKR">PKR</option>
+              <option value="INR">INR</option>
+              <option value="CNY">CNY</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Get Live Rates</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card rates-result" id="ratesResult">
+        <h2>Results</h2>
+        <p id="statusText">Select currencies and click "Get Live Rates".</p>
+        <ul id="ratesList"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 GlobalBridge. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
